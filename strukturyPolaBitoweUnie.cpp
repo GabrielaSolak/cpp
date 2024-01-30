@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
@@ -54,7 +53,6 @@ int main()
     zm1.b = 'o';
     cout << zm1.b << ", ";
     cout << zm1.a << endl;
-
 
 
     return 0;
