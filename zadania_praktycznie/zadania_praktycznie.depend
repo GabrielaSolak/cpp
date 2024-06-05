@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1717581506 source:c:\users\student\desktop\zadania_praktycznie\main.cpp
+	<iostream>
+	<stdio.h>
+	<math.h>
+
