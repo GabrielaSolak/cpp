@@ -46,7 +46,7 @@ void minMax()
     delete[] tab;
 }
 
-//Obliczanie pola trójkąta
+//Obliczanie pola trójk¹ta
 double oblicz(int a, int b, int c)
 {
     //sprawdzenie trojkata
@@ -64,7 +64,7 @@ double oblicz(int a, int b, int c)
 
 }
 
-//Ciąg Fibonacciego
+//Ciag Fibonacciego
 void fib(int n)
 {
     int *t = new int[n];
@@ -84,15 +84,60 @@ void fib(int n)
 }
 
 //Srednia arytmetyczna
+void srednia()
+{
+    int l;
+    int tab[100];
+    int j;
+    for(j = 0; tab[j-1] != -1 || j == 100; j++)
+    {
+        cin >> tab[j];
+    }
 
+    //wypisanie i suma
+    int suma = 0;
+    for(int i = 0; i < j-1; i++)
+    {
+        cout << tab[i] << ", ";
+        suma += tab[i];
+    }
+    cout << endl;
 
+    //srednia
+    cout << suma / (j - 1);
+
+}
+
+//Uklad równan liniowych
+struct wynik
+    {
+        float x;
+        float y;
+    };
+
+wynik rownania_liniowe(float a_1, float b_1, float c_1, float a_2, float b_2, float c_2)
+{
+    float W = (a_1 * b_2) - (a_2 * b_1);
+    float Wx = (c_1 * b_2) - (c_2 * b_1);
+    float Wy = (a_1 * c_2) - (a_2 * c_1);
+
+    wynik yx;
+    yx.x = Wy / W;
+    yx.y = Wx / W;
+
+    return yx;
+}
 
 int main()
 {
     //minMax();
     //cout << endl << silnia(6) << endl;
-    cout << oblicz(4, 3, 2);
-
+    //cout << oblicz(4, 3, 2);
     //fib(6);
+    //srednia();
+
+    //cout << rownania_liniowe(4, -7, -1, 2, 3, 6).x << ", ";
+    //cout << rownania_liniowe(4, -7, -1, 2, 3, 6).y;
+    
     return 0;
 }
